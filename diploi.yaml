@@ -1,0 +1,8 @@
+diploiVersion: v1.0
+type: addon
+name: PostgreSQL
+description: Official PostgreSQL addon for Diploi.
+
+storage:
+  - identifier: postgres
+    sizeMiB: 6144
