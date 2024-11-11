@@ -3,6 +3,33 @@ type: addon
 name: PostgreSQL
 description: Official PostgreSQL addon for Diploi.
 
+parameterGroups:
+  - name: Connection
+    identifier: postgres
+    description: Superuser & connection configuration
+    parameters:
+      - name: Host
+        identifier: POSTGRES_HOST
+        defaultValue: postgres
+        type: string
+      - name: Port
+        identifier: POSTGRES_PORT
+        defaultValue: 5432
+        type: integer
+      - name: User
+        identifier: POSTGRES_USER
+        defaultValue: postgres
+        type: string
+        contexts: label=postgres,label=app
+      - name: Password
+        identifier: POSTGRES_PASSWORD
+        defaultValue: postgres
+        type: secret
+      - name: Database
+        identifier: POSTGRES_DB
+        defaultValue: app
+        type: string
+
 storage:
   - identifier: postgres
     sizeMiB: 6144

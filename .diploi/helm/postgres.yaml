@@ -29,4 +29,4 @@ spec:
       volumes:
         - name: postgres-mount
           hostPath:
-            path: { { $.Values.storage.postgres.hostPath } }
+            path: {{ $.Values.storage.postgres.hostPath }}
