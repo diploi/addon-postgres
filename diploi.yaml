@@ -30,6 +30,15 @@ parameterGroups:
         defaultValue: app
         type: string
 
+logs:
+  - name: Server log
+    type: log
+    labelSelector: app=postgres
+  - name: Date log
+    type: exec
+    labelSelector: app=postgres
+    command: sh -c 'while true; do date ; sleep 5; done'
+    
 storage:
   - identifier: postgres
     sizeMiB: 6144
