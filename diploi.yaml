@@ -37,7 +37,7 @@ logs:
   - name: Date log
     type: exec
     labelSelector: app=postgres
-    command: sh -c 'while true; do date ; sleep 5; done'
+    command: ["sh", "-c", "while true; do date ; sleep 5; done"]
     
 storage:
   - identifier: postgres
