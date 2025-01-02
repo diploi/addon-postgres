@@ -38,6 +38,9 @@ logs:
     type: exec
     labelSelector: app=postgres
     command: ["sh", "-c", "while true; do date ; sleep 5; done"]
+image:
+  - identifier: postgres
+    image: postgres:17.0
     
 storage:
   - identifier: postgres
