@@ -41,7 +41,7 @@ logs:
     
 images:
   - identifier: postgres
-    image: postgres:17.0
+    image: postgres:17.2
     
 storage:
   - identifier: postgres
