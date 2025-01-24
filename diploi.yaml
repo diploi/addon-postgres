@@ -30,6 +30,11 @@ parameterGroups:
         defaultValue: app
         type: string
 
+connectionStrings:
+  - name: Connection URI
+    value: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    description: This connection string is for components within the deployment and is inaccessible externally.
+
 logs:
   - name: Server log
     type: log
