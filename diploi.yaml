@@ -10,7 +10,7 @@ parameterGroups:
     parameters:
       - name: Host
         identifier: POSTGRES_HOST
-        defaultValue: ${INTERNAL_ADDRESS}
+        defaultValue: ${NAMESPACE}.postgres
         type: string
         readOnly: true
       - name: Port
