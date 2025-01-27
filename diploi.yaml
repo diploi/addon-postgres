@@ -37,7 +37,7 @@ connectionStrings:
     description: This connection URI is for components within the deployment and is inaccessible externally.
 
 logs:
-  - name: Server Log
+  - name: PostgreSQL Log
     type: log
     labelSelector: app=postgres
     
