@@ -30,6 +30,10 @@ parameterGroups:
         identifier: POSTGRES_DB
         defaultValue: app
         type: string
+      - name: Database_url
+        identifier: DATABASE_URL
+        defaultValue: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+        type: string
 
 connectionStrings:
   - name: Connection URI
