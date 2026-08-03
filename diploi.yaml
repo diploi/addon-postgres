@@ -34,6 +34,11 @@ parameterGroups:
         identifier: DATABASE_URL
         defaultValue: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
         type: string
+      - name: Image
+        identifier: POSTGRES_IMAGE
+        defaultValue: postgres:18.3
+        type: string
+        
 
 connectionStrings:
   - name: Connection URI

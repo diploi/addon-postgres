@@ -15,7 +15,13 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: {{ .Values.images.postgres }}
+          {{- $image := .Values.images.postgres }}
+          {{- range .Values.env }}
+            {{- if and (eq .identifier "POSTGRES_IMAGE") (ne $image .value) }}
+              {{ $image = .value}}
+            {{- end }}
+          {{- end }}         
+          image: {{ $image }}
           imagePullPolicy: Always
           ports:
             - containerPort: 5432
