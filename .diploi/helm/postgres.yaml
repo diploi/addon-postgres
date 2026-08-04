@@ -15,14 +15,12 @@ spec:
     spec:
       containers:
         - name: postgres
-          {{- $image := .Values.images.postgres }}
-          {{- range .Values.env }}
-            {{- if and (eq .identifier "POSTGRES_IMAGE") (ne $image .value) }}
-              {{ $image = .value}}
-            {{- end }}
-          {{- end }}         
-          image: {{ $image }}
+          image: {{ .Values.images.postgres }}
           imagePullPolicy: Always
+          args:
+            - postgres
+            - -c
+            - shared_preload_libraries=pg_stat_statements
           ports:
             - containerPort: 5432
               name: postgres
